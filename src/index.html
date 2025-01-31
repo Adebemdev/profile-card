@@ -7,9 +7,20 @@
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="/src/assets/favicon/favicons/favicon-16.png"
+      href="/src/assets/favicon/favicons/favicon.ico"
     />
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- <link rel="manifest" href="/manifest.json" /> -->
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="style.css" />
@@ -17,6 +28,47 @@
     <title>My Profile Card</title>
   </head>
   <body>
-    <h1>Adeola Busayo</h1>
+    <div class="profile-card">
+      <div class="profile-header">
+        <img
+          data-testid="profilePicture"
+          src="./assets/images/profile-card-image.png"
+          class="profile-image"
+          alt="profile image"
+        />
+        <h1 data-testid="fullName" class="profile-name" id="profileName"></h1>
+        <h2 data-testid="jobTitle" id="profileTitle" class="jobTitle"></h2>
+        <p data-testid="shortBio" id="profileBio" class="profile-shortBio"></p>
+      </div>
+      <div class="profie-info">
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div data-testid="currentLocation" class="location-info">
+            <span class="location-secondary" id="country"></span>
+            <span class="location-primary" id="city"></span>
+          </div>
+        </div>
+        <div data-testid="currentTimeUTC" class="info-item">
+          <i class="fas fa-clock"></i>
+          <span id="currentTime">Loading...</span>
+        </div>
+        <div data-testid="emailAddress" class="info-item">
+          <i class="fas fa-envelope"></i>
+          <span id="email"></span>
+        </div>
+      </div>
+      <div data-testid="socialLinks" class="social-links">
+        <a href="#" class="social-link" id="github">
+          <i class="fab fa-github fa-lg"></i>
+        </a>
+        <a href="#" class="social-link" id="linkedin">
+          <i class="fab fa-linkedin fa-lg"></i>
+        </a>
+        <a href="#" class="social-link" id="twitter">
+          <i class="fab fa-twitter fa-lg"></i>
+        </a>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>

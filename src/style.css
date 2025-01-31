@@ -1,5 +1,149 @@
-* {
+:root {
+  --primary-color: #1a1a1a;
+  --secondary-color: #666;
+  --background-color: #f0f2f5;
+  --card-background: white;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  background: var(--background-color);
+  color: var(--primary-color);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: var(--spacing-md);
+}
+
+.profile-card {
+  background: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: '';
+  width: min(90%, 400px);
+  transition: var(--transition);
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: '';
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: '';
+  object-fit: cover;
+}
+
+.profile-name {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  margin-bottom: var(--spacing-sm);
+}
+
+.profile-bio {
+  color: var(--secondary-color);
+  margin-bottom: '';
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+}
+
+/* Profile Info */
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: '';
+  margin-bottom: var(--spacing-lg);
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: '';
+  color: var(--secondary-color);
+}
+
+.info-item i {
+  width: 20px;
+  text-align: center;
+  color: var(--secondary-color);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+/* Location Specific Styles */
+.location-info {
+  display: flex;
+  flex-direction: column;
+  gap: '';
+}
+
+.location-primary {
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.location-secondary {
+  font-size: 0.9em;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: '';
+}
+
+.social-link {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: var(--transition);
+  padding: '';
+}
+
+.social-link:hover {
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+  .profile-card {
+    padding: '';
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .social-links {
+    gap: '';
+  }
+}
+
+@media (max-width: 320px) {
+  .profile-card {
+    padding: '';
+  }
 }
