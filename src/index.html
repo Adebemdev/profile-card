@@ -3,12 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/src/assets/favicon/favicons/favicon.ico"
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,8 +15,6 @@
     />
 
     <!-- <link rel="manifest" href="/manifest.json" /> -->
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="style.css" />
 
     <title>My Profile Card</title>
@@ -40,6 +32,7 @@
         <h2 data-testid="jobTitle" id="profileTitle" class="jobTitle"></h2>
         <p data-testid="shortBio" id="profileBio" class="profile-shortBio"></p>
       </div>
+
       <div class="profie-info">
         <div class="info-item">
           <i class="fas fa-map-marker-alt"></i>
@@ -58,14 +51,35 @@
         </div>
       </div>
       <div data-testid="socialLinks" class="social-links">
-        <a href="#" class="social-link" id="github">
-          <i class="fab fa-github fa-lg"></i>
+        <a
+          href="#"
+          class="social-link linkedin"
+          id="linkedin"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-linkedin"></i>
+          <span>LinkedIn</span>
         </a>
-        <a href="#" class="social-link" id="linkedin">
-          <i class="fab fa-linkedin fa-lg"></i>
+        <a
+          href="#"
+          class="social-link github"
+          id="github"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
         </a>
-        <a href="#" class="social-link" id="twitter">
-          <i class="fab fa-twitter fa-lg"></i>
+        <a
+          href="#"
+          class="social-link twitter"
+          id="twitter"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-twitter"></i>
+          <span>Twitter</span>
         </a>
       </div>
     </div>

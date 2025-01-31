@@ -11,7 +11,7 @@ const CONFIG = {
 
 const profileData = {
   name: 'Adeola Busayo',
-  bio: 'Full-stack software engineer focused on building robust, user-centric applications. Advocate for clean code practices and open-source collaboration.',
+  bio: 'Front-End software engineer focused on building robust, user-centric applications and contributing to open-source projects.',
   title: 'Frontend Engineer',
   location: {
     city: 'Abuja FCT',
@@ -20,9 +20,18 @@ const profileData = {
   email: 'adeolabusayo1995@gmail.com',
   image: './assets/images/profile-card-image.png',
   social: {
-    github: 'https://github.com/Adebemdev',
-    linkedin: 'https://www.linkedin.com/in/adeolabusayobemdev/',
-    twitter: 'https://x.com/bem_ade',
+    linkedin: {
+      username: '',
+      url: 'https://www.linkedin.com/in/adeolabusayobemdev/',
+    },
+    github: {
+      username: 'Adebemdev',
+      url: 'https://github.com/Adebemdev',
+    },
+    twitter: {
+      username: '@bem_ade',
+      url: 'https://x.com/bem_ade',
+    },
   },
 };
 
@@ -35,6 +44,7 @@ class ProfileManager {
     this.updateProfile();
     this.updateTime();
     this.startTimeUpdate();
+    this.updateSocialLinks();
   }
 
   updateProfile() {
@@ -57,6 +67,16 @@ class ProfileManager {
         } else {
           element.textContent = value;
         }
+      }
+    });
+  }
+
+  updateSocialLinks() {
+    Object.entries(this.data.social).forEach(([platform, data]) => {
+      const link = document.getElementById(platform);
+      if (link && data.url) {
+        link.href = data.url;
+        link.setAttribute('aria-label', `Visit ${platform} profile`);
       }
     });
   }
